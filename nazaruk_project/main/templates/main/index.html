@@ -1,5 +1,23 @@
 {% extends 'main/layout.html' %}
 
+{% block title %}Main Page{% endblock %}
+
 {% block content %}
 
+<div class="features">
+    <h1><i class="fas fa-code"></i> Main Page</h1>
+    <section id="project-introduction">
+        <h2>About This Project</h2>
+        <p>Welcome to my pet project! Built from the ground up, this platform is a testament to my journey into backend development.</p>
+        <p>Through its design and features, I've aimed to showcase my skills in  e.g., Python, Django, PostgreSQL. Every line of code and every decision made reflects my dedication to creating efficient, secure, and scalable backend systems.</p>
+        <p>Why this project? As I aspire to step into the role of a Junior Backend Developer, I wanted to offer a hands-on demonstration of my capabilities. Dive in, explore, and see what I can bring to the ever-evolving world of backend tech.</p>
+    </section>
+    <button class="btn btn-warning">Click <3</button>
+    {% for el in values %}
+    {% filter upper %}
+    <p>{{ el }}</p>
+    {% endfilter %}
+    {% endfor %}
+    {{ obj }}
+</div>
 {% endblock %}

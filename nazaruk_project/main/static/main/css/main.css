@@ -1,0 +1,105 @@
+/* In your CSS file */
+body {
+    background: #f5f7fa; /* Light gray-blue background for a cooler feel */
+    font-family: 'Arial', sans-serif; /* You can use other fonts like 'Roboto', 'Helvetica', etc. */
+    color: #333; /* Dark gray text for better readability */
+}
+
+aside {
+    float: left;
+    background: #e9eff3; /* Slightly darker gray-blue for contrast */
+    width: 20%;
+    padding: 2.5%;
+    height: 100%;
+    color: #2c3e50; /* Darker blue-gray text */
+    border-right: 3px solid #2c3e50; /* Darker blue-gray border on the right */
+    border-left: 3px solid #2c3e50; /* Darker blue-gray border on the left */
+    border-top: 3px solid #2c3e50; /* Darker blue-gray border on the top */
+    border-bottom: 3px solid #2c3e50; /* Darker blue-gray border on the bottom */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+
+/* Enhancing the hover effect for a more interactive feel */
+aside:hover {
+    background: #dce4e9; /* Slightly darker background on hover */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); /* Increased shadow depth on hover */
+}
+
+.features {
+    padding: 2em;
+    background-color: #f5f7fa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+#project-introduction {
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+#project-introduction h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.features h1 i {
+    margin-right: 10px;
+    color: #2c3e50;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #2c3e50; /* Dark blue-gray color for better emphasis */
+    text-transform: uppercase; /* Transforming text to uppercase for a more logo-like feel */
+    letter-spacing: 1px; /* Adding some letter spacing for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* A subtle text shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+/* Adding a hover effect for interactivity */
+aside .logo:hover {
+    color: #34495e; /* Slightly darker color on hover */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+aside h3 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+aside ul {list-style: none;}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+
+}
+
+.features {
+    float: left;
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
