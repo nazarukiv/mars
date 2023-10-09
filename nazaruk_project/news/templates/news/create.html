@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Form for adding news{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+    <h1><i class="fas fa-code"></i>Form for adding news</h1> <!-- Move this to the top -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="text" placeholder="Name of article" class="form-control"><br>
+        <input type="text" placeholder="Announcement" class="form-control"><br>
+        <textarea class="form-control" placeholder="Text of article"></textarea>
+        <input type="date" class="form-control"><br>
+        <input type="time" class="form-control">
+        <button class="btn btn-success" type="submit">Add Acticle</button>
+
+    </form>
+</div>
+{% endblock %}

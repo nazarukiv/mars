@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}News{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1><i class="fas fa-code"></i> Main News Page</h1> <!-- Move this to the top -->
+    {% if news %}
+    {% for el in news %}
+        <div class="alert alert-warning mt-3">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.intro }}</p>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>You don't have any news!!!</p>
+    {% endif %}
+</div>
+{% endblock %}
+
