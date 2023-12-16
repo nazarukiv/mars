@@ -1,27 +1,28 @@
 from django.shortcuts import render, redirect
-from .models import Article
+from .models import News
 from .forms import ArticlesForm
 from django.views.generic import DetailView, ListView, UpdateView, DeleteView
+from django.urls import reverse
 
 
-def news_home(request):
-    news = Article.objects.all().order_by("-date")[:]
-    return render(request, 'news/news_home.html', {'news' : news})
 
 
 class NewsDeleteView(DeleteView):
-    model = Article
+    model = News
     success_url = '/news/'
     template_name = 'news/news-delete.html'
 
 class NewsUpdateView(UpdateView):
-    model = Article
+    model = News
     template_name = 'news/create.html'
 
     form_class = ArticlesForm
 
+    def get_success_url(self):
+        return reverse('news_home')
+
 class NewsDetailView(DetailView):
-    model = Article
+    model = News
     template_name = 'news/details_view.html'
     context_object_name = 'article'
 
@@ -43,3 +44,12 @@ def create(request):
         'error' : error
     }
     return render(request, 'news/create.html', data)
+
+# in views.py
+def news_home(request, category=None):
+    if category:
+        news = News.objects.filter(category=category.upper())
+    else:
+        news = News.objects.all()
+    return render(request, 'news/news_home.html', {'news': news})
+

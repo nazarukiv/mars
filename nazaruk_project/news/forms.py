@@ -1,10 +1,10 @@
-from .models import Article
+from .models import News
 from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
 
 
 class ArticlesForm(ModelForm):
     class Meta:
-        model = Article
+        model = News
         fields = ['title', 'intro', 'full_text', 'date']
 
         widgets = {

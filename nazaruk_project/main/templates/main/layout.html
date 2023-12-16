@@ -15,18 +15,35 @@
 
 </head>
 <body>
-    <aside>
-        <img src="{% static 'main/img/n2.jpeg' %}" style="width:100px; height:60px;">
-        <span class="logo">nazaruk_iv</span>
-        <h3>Navigation</h3>
-        <ul>
-            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Main Page</a></li>
-            <li><a href="{% url 'about' %}"><i class="fas fa-user"></i> About us</a></li>
-            <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact us</a></li>
-            <li><a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News Home</a></li>
-            <li><a href="{% url 'create' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i></button></a></li>
-        </ul>
-    </aside>
+    <!-- in layout.html -->
+
+<aside>
+    <img src="{% static 'main/img/n2.jpeg' %}" style="width:100px; height:60px;">
+    <span class="logo">nazaruk_iv</span>
+    <h3>Navigation</h3>
+    <ul>
+        <!-- Existing links -->
+        <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Main Page</a></li>
+        <li><a href="{% url 'about' %}"><i class="fas fa-user"></i> About us</a></li>
+        <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact us</a></li>
+        <li><a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News Home</a></li>
+        <li><a href="{% url 'create' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i></button></a></li>
+    </ul>
+
+    <!-- New News Categories Navigation -->
+    <h3>Categories</h3>
+    <ul>
+        <li><a href="{% url 'news_category' category='POLITICS' %}"><i class="fas fa-briefcase"></i> Politics</a></li>
+        <li><a href="{% url 'news_category' category='WEATHER' %}"><i class="fas fa-cloud"></i> Weather</a></li>
+        <li><a href="{% url 'news_category' category='UK' %}"><i class="fas fa-flag"></i> UK</a></li>
+        <li><a href="{% url 'news_category' category='USA' %}"><i class="fas fa-flag-usa"></i> USA</a></li>
+        <li><a href="{% url 'news_category' category='SPORTS' %}"><i class="fas fa-basketball-ball"></i> Sports</a></li>
+        <li><a href="{% url 'news_category' category='EUROPE' %}"><i class="fas fa-globe-europe"></i> Europe</a></li>
+        <li><a href="{% url 'news_category' category='SCIENCE' %}"><i class="fas fa-atom"></i> Science</a></li>
+        <li><a href="{% url 'news_category' category='TECH' %}"><i class="fas fa-laptop-code"></i> Tech</a></li>
+    </ul>
+</aside>
+
     <main>
         {% block content %}
         <!-- This block can be overridden in child templates -->
